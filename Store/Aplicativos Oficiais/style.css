@@ -14,21 +14,21 @@ body{
 	font-style: normal;
     color: white;
     animation: forwards 2s entrada;
+	align-items: center;
+    place-items: center;
+    margin: 2%;
 }
-.Infinity{
-	display: flex;
+header{
+    background-color: rgb(0, 0, 0);
+    height: 10%;
+    width: 35%;
+    place-items: center;
+    border: solid 2px;
+    border-radius: 5px;
 }
-#infinitytitle{
-	margin-top: -115px;
-	text-align: center;
-	background-color: rgb(32, 32, 32);
-	padding: 21px;
-	border-radius: 15px;
-}
-#InfinityIcon{
-	margin: 35px;
-    border-radius: 20px;
-    cursor: pointer;
+ul{
+    display: flex;
+    list-style: none;
 }
 button{
 	font-size: 20px;
@@ -48,8 +48,7 @@ button{
     margin: 5px;
 }
 button:hover{
-	margin-top: -2px;
-	font-size: 25px;
+    translate: 0px -5px;
 	background-color: white;
 	color: black;
 	border-color: rgb(0, 0, 0);
@@ -61,11 +60,13 @@ button:hover{
     background: none;
     color: rgb(27, 27, 27);
     transition: 500ms;
-    width: 55%;
+    width: 55vw;
+	min-width: 10vw;
     cursor: cell;
     margin-top: 5%;
 }
 .app:hover{
+	translate: 0px -5px;
     background: rgb(53, 53, 53);
     color: white;
     border-radius: 20px;
@@ -75,7 +76,7 @@ button:hover{
     background: none;
     color: rgb(27, 27, 27);
     transition: 500ms;
-    width: 55%;
+    width: 55vw;
     cursor: no-drop;
 }
 .app-error:hover{
@@ -83,10 +84,6 @@ button:hover{
     color: white;
     border-radius: 20px;
 }
-#ads{
-	position: fixed;
-	opacity: 100%;
-	width: 0%;
-	height: 0%;
-	border: none;
+.Menu{
+    margin-top: 40px;
 }
