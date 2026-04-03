@@ -74,36 +74,6 @@ button:hover{
 .Menu{
     margin-top: 40px;
 }
-#jda{
-    background-color: white;
-    height: 50vh;
-    width: 50vw;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    overflow: auto;
-}
-#fjda{
-    position: absolute;
-    right: 0%;
-    background-color: white;
-    width: 50px;
-    height: 20px;
-    color: black;
-    border: solid 2px black;
-    text-align: center;
-    cursor: pointer;
-}
-#postariframe{
-    height: 40vh;
-    width: 50vw;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 header{
     background-color: rgb(0, 0, 0);
     height: 50%;
