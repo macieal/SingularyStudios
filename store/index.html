@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="SingularyStudios - Store" />
+    <meta
+      property="og:description"
+      content="Loja da SingularyStudios de Apps/jogos!"
+    />
+    <meta property="og:url" content="https://seusite.com" />
+    <meta name="theme-color" content="#242424" />
+    <title>SingularyStudios</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/MarGamesStoresemfundo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          src="../images/singulary.png"
+          height="60px"
+          width="60px"
+          style="margin-left: 15px"
+        />
+        <div class="buttonsactionposition">
+          <div class="buttonselect" onclick="window.history.back()">About</div>
+          <div class="buttonselect">Store</div>
+          <div class="buttonselect" href="../index.html">Home</div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="others-applications">
+      <h1>Nenhum aplicativo disponivel ;/</h1>
+    </div>
+
+    <div id="applications-official">
+      <div id="application">
+        <img src="../images/hexagon.png" onclick="OpenOly()" class="app" />
+        <h4>Oly</h4>
+      </div>
+      <div id="application">
+        <img
+          src="../images/code_blocks_71dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png"
+          onclick="OpenInfcode()"
+          class="app"
+        />
+        <h4>InfinityCode</h4>
+      </div>
+      <div id="application">
+        <img
+          src="../images/dimensoes.png"
+          onclick="OpenInfpost()"
+          class="app"
+        />
+        <h4>InfinityPost</h4>
+      </div>
+      <div id="application">
+        <img src="../images/MarGamesStoresemfundo.png" class="app" />
+        <h4>InfinityStore</h4>
+      </div>
+    </div>
+
+    <div class="menubuttons">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeeup1fOzgxhTtpEp0FDCQB6-F5FdzY_pnEOa-Or5rjELgMFg/viewform?pli=1"
+        ><button id="selectbutton">Post application</button></a
+      >
+      <button id="appoficial" onclick="appsoficial()">
+        Aplicativos Oficiais
+      </button>
+      <button id="appoutros" onclick="appsoutros()" style="display: none">
+        Outros Aplicativos
+      </button>
+    </div>
+
+    <div id="windows"></div>
+    <!--
+      <div id="window-application-back">
+        <div id="window-application">
+          <div id="exit" onclick="hidewindow()"></div>
+          <img src="../images/singulary.png" id="application-icon" />
+          <div id="container-app">
+            <h1>SingularyStudios</h1>
+            <h2>Plataformas: Android, Linux, Windows.</h2>
+            <h2>Criador: Marciel</h2>
+          </div>
+          <a href=""><button id="download">Baixar</button></a>
+        </div>
+      </div>
+    </div> -->
+
+    <footer>Todos os direitos reservador por SingularyStudios.</footer>
+
+    <script src="../index.js"></script>
+  </body>
+</html>

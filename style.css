@@ -1,154 +1,314 @@
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 15px 20px;
+    top: 5%;
+  }
+}
 
-/* Reset básico para tirar margens padrão dos navegadores */
+@keyframes enter {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes enterbar {
+  0% {
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  user-select: none;
 }
-
 body {
-  background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
-  font-family: "Pixelify Sans", sans-serif;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/universe.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
   color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+header {
+  animation: normal 2s enterbar;
+  width: 90%;
+  overflow: hidden;
+  height: 90px;
+  background-color: rgba(18, 18, 18, 0.5);
+  display: grid;
   align-items: center;
-  overflow-x: hidden;
-}
-
-/* --- Cabeçalho (Header) --- */
-.main-header {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 20px;
-  animation: slideDown 1s ease-out;
-}
-
-.brand-container {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Espaço entre logo e texto */
-  background-color: rgba(32, 32, 32, 0.9); /* Fundo semi-transparente */
-  padding: 15px 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra elegante */
-  border: 1px solid #444;
-}
-
-.brand-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.brand-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 0; /* Garante que não tenha margem empurrando */
-}
-
-/* --- Conteúdo --- */
-.container {
-  text-align: center;
-  max-width: 800px;
-  padding: 20px;
-  width: 100%;
-  flex: 1; /* Empurra o rodapé para baixo */
-}
-
-.content-section {
-  margin-bottom: 60px;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
-}
-
-/* Atraso na animação do segundo item para ficar chique */
-.content-section:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.section-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #eee;
-}
-
-.subtext {
-  color: #aaa;
-  font-size: 1rem;
-  margin-bottom: 25px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* --- Botões Elegantes --- */
-.btn-primary {
-  display: inline-block;
-  background-color: rgb(43, 43, 43);
-  color: white;
-  text-decoration: none;
-  padding: 15px 50px;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid transparent;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.btn-primary:hover {
-  background-color: white;
-  color: black;
-  transform: translateY(-5px); /* Sobe um pouco suavemente */
-  box-shadow: 0 15px 25px rgba(255, 255, 255, 0.15);
-  border-color: black;
-}
-
-/* --- Redes Sociais --- */
-.social-footer {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.social-link img {
-  height: 60px;
-  width: auto;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  border-radius: 15px;
-}
-
-.social-link:hover img {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
-}
-
-.ads-frame {
+  padding: 0 10px;
   position: fixed;
-  width: 0;
-  height: 0;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: solid 2px white;
+}
+nav {
+  display: inline-block;
+  overflow: hidden;
+}
+hr {
+  width: 99%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2vw;
+}
+.buttonsaction {
+  background-color: transparent;
+  border: solid 0.1vw gray;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  border-radius: 0.5vw;
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+.buttonsactionposition {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+iframe {
+  width: 100%;
+  height: 89vh;
+}
+.buttonselect {
+  margin-left: 2vw;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.buttonselect:hover {
+  opacity: 50%;
+}
+#home {
+  animation: normal enter 2s;
+  width: 100%;
+}
+#discord {
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  top: 115vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 500ms;
+}
+#discord:hover {
+  position: absolute;
+  top: 71%;
+  left: 50%;
+}
+footer {
+  position: fixed;
+  left: 50%;
+  top: 99.3%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+}
+#about {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 57%;
+  display: none;
+  overflow-y: auto;
+  width: 90%;
+  height: 75vh;
+}
+
+#container {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: solid gray 0.1vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  padding: 2vw;
+  border-radius: 1vw;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: normal enter 1s;
+}
+
+#window-application-back {
+  width: 100%;
+  height: 99vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: block;
+}
+
+#window-application {
+  background-color: rgb(21, 21, 21);
+  width: 90%;
+  height: 90vh;
+  border-radius: 2vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: window-enter normal 1s;
+}
+@keyframes window-enter {
+  0% {
+    opacity: 0%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    opacity: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+#exit {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  background-color: red;
+  padding: 1vw;
+  border-radius: 100vw;
+  border: 0.2vw rgb(255, 72, 0) solid;
+}
+
+#application-icon {
+  width: 200px;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#download {
+  border-radius: 1vw;
+  color: white;
+  background-color: rgb(0, 180, 255);
   border: none;
-  visibility: hidden;
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
 }
 
-/* --- Animações --- */
-@keyframes fadeIn {
-  to { opacity: 1; }
+#container-app {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  margin-top: 2vw;
 }
 
-@keyframes slideDown {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+#application {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  background-color: rgb(27, 27, 27);
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+  border-radius: 2vw;
+  transition: 0.25s normal;
+}
+
+#application:hover {
+  color: black;
+  background-color: rgb(76, 76, 76);
+}
+
+.app {
+  width: 10vw;
+}
+
+#applications-others-applications {
+  display: block;
+}
+
+#applications-official {
+  display: none;
+}
+
+#applications-official,
+#others-applications {
+  backdrop-filter: blur(5px);
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  text-align: center;
+  border: solid 2px white;
+  height: 75vh;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+#appoficial,
+#appoutros,
+#selectbutton {
+  background-color: black;
+  border-radius: 2vw;
+  border: none;
+  padding: 0.5vw;
+  opacity: 75%;
+  color: white;
+  transition: 0.5s;
+}
+
+#selectbutton:hover {
+  opacity: 100%;
+}
+
+.menubuttons {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  place-items: center;
+  justify-content: center;
+  justify-items: center;
 }
